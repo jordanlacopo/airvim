@@ -196,6 +196,11 @@ _G.packer_plugins = {
     path = "/Users/jordanlacopo/.local/share/nvim/site/pack/packer/start/packer.nvim",
     url = "https://github.com/wbthomason/packer.nvim"
   },
+  playground = {
+    loaded = true,
+    path = "/Users/jordanlacopo/.local/share/nvim/site/pack/packer/start/playground",
+    url = "https://github.com/nvim-treesitter/playground"
+  },
   ["plenary.nvim"] = {
     loaded = true,
     path = "/Users/jordanlacopo/.local/share/nvim/site/pack/packer/start/plenary.nvim",
@@ -220,6 +225,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/jordanlacopo/.local/share/nvim/site/pack/packer/start/vim-ReplaceWithRegister",
     url = "https://github.com/inkarkat/vim-ReplaceWithRegister"
+  },
+  ["vim-illuminate"] = {
+    loaded = true,
+    path = "/Users/jordanlacopo/.local/share/nvim/site/pack/packer/start/vim-illuminate",
+    url = "https://github.com/RRethy/vim-illuminate"
   },
   ["vim-maximizer"] = {
     loaded = true,
