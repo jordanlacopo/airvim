@@ -36,6 +36,7 @@ return packer.startup(function(use)
 	use("catppuccin/nvim")
 
 	use("christoomey/vim-tmux-navigator") -- tmux & split window navigation
+	use("kdheepak/lazygit.nvim")
 	use("RRethy/vim-illuminate")
 	use("szw/vim-maximizer") -- maximizes and restores current window
 	use("nvim-treesitter/playground")
