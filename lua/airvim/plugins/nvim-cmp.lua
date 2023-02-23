@@ -19,7 +19,6 @@ if not luasnip_status then
 	return
 end
 
-luasnip.filetype_extend("javascript", { "javascriptreact" })
 -- import lspkind plugin safely
 local lspkind_status, lspkind = pcall(require, "lspkind")
 if not lspkind_status then
@@ -111,9 +110,6 @@ cmp.setup({
 		format = lspkind.cmp_format({
 			maxwidth = 50,
 			ellipsis_char = "...",
-			before = function(entry, vim_item)
-				vim_item.dup = { buffer = 1, path = 1, nvim_lsp = 0 }
-			end,
 		}),
 	},
 })
