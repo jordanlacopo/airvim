@@ -29,6 +29,16 @@ end
 -- add list of plugins to install
 return packer.startup(function(use)
 	-- packer can manage itself
+	use({
+		"glepnir/dashboard-nvim",
+		event = "VimEnter",
+		config = function()
+			require("dashboard").setup({
+				-- config
+			})
+		end,
+		requires = { "nvim-tree/nvim-web-devicons" },
+	})
 	use("wbthomason/packer.nvim")
 	use("nvim-lua/plenary.nvim") -- lua functions that many plugins use
 	use("rebelot/kanagawa.nvim")
