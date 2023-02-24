@@ -17,7 +17,8 @@ null_ls.setup({
 	sources = {
 		--  to disable file types use
 		--  "formatting.prettier.with({disabled_filetypes: {}})" (see null-ls docs)
-		formatting.gofmt,
+		formatting.goimports_reviser, -- go imports reviser
+		formatting.gofmt, -- go formatter
 		formatting.prettier, -- js/ts formatter
 		formatting.stylua, -- lua formatter
 		--diagnostics.golangci_lint, -- golang linter
