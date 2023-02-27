@@ -21,7 +21,7 @@ null_ls.setup({
 		formatting.gofmt, -- go formatter
 		formatting.prettier, -- js/ts formatter
 		formatting.stylua, -- lua formatter
-		--diagnostics.golangci_lint, -- golang linter
+		diagnostics.golangci_lint, -- golang linter
 		diagnostics.eslint_d.with({ -- js/ts linter
 			-- only enable eslint if root has .eslintrc.js (not in youtube nvim video)
 			condition = function(utils)
