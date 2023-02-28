@@ -32,7 +32,6 @@ if not status_cmp_ok then
 	return
 end
 local select_opts = { behavior = cmp.SelectBehavior.Select }
-
 --CMP SETUP
 cmp.setup({
 	snippet = {
@@ -40,6 +39,7 @@ cmp.setup({
 			luasnip.lsp_expand(args.body)
 		end,
 	},
+	preselect = cmp.PreselectMode.None,
 	mapping = {
 		["<Up>"] = cmp.mapping.select_prev_item(select_opts),
 		["<Down>"] = cmp.mapping.select_next_item(select_opts),
@@ -88,7 +88,6 @@ cmp.setup({
 			end
 		end,
 	},
-
 	-- sources for autocompletion
 	sources = cmp.config.sources({
 		{ name = "nvim_lsp" }, -- lsp
