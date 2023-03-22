@@ -11,7 +11,7 @@ treesitter.setup({
 		enable = true,
 	},
 	tree_docs = {
-		enable = true,
+		enable = false,
 		spec_config = {},
 	},
 	rainbow = {

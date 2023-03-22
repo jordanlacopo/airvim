@@ -29,6 +29,7 @@ end
 -- add list of plugins to install
 return packer.startup(function(use)
 	-- packer can manage itself
+	use({ "nvim-treesitter/nvim-tree-docs" })
 	use({
 		"glepnir/dashboard-nvim",
 		event = "VimEnter",
