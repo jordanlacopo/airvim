@@ -2,7 +2,7 @@
 Airvim = {}
 
 Airvim.transparent_background = true
-Airvim.colorscheme = "catppuccin"
+Airvim.colorscheme = "kanagawa"
 -- Vim options
 local default_options = {
 	backup = false, -- creates a backup file

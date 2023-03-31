@@ -1,72 +1,31 @@
 --kanawaga setup
 -- Default options:
 require("kanagawa").setup({
+	compile = false, -- enable compiling the colorscheme
 	undercurl = true, -- enable undercurls
 	commentStyle = { italic = true },
 	functionStyle = {},
 	keywordStyle = { italic = true },
 	statementStyle = { bold = true },
 	typeStyle = {},
-	variablebuiltinStyle = { italic = true },
-	specialReturn = true, -- special highlight for the return keyword
-	specialException = true, -- special highlight for exception handling keywords
-	transparent = Airvim.transparent_background, -- do not set background color
+	transparent = true, -- do not set background color
 	dimInactive = false, -- dim inactive window `:h hl-NormalNC`
-	globalStatus = false, -- adjust window separators highlight for laststatus=3
 	terminalColors = true, -- define vim.g.terminal_color_{0,17}
-	colors = {},
-	overrides = {},
-	theme = "default", -- Load "default" theme or the experimental "light" theme
-})
--- rose pine setup
-
-require("rose-pine").setup({
-	--- @usage 'auto'|'main'|'moon'|'dawn'
-	variant = "moon",
-	--- @usage 'main'|'moon'|'dawn'
-	dark_variant = "moon",
-	bold_vert_split = false,
-	dim_nc_background = false,
-	disable_background = Airvim.transparent_background,
-	disable_float_background = false,
-	disable_italics = false,
-
-	--- @usage string hex value or named color from rosepinetheme.com/palette
-	groups = {
-		background = "base",
-		panel = "surface",
-		border = "highlight_med",
-		comment = "muted",
-		link = "iris",
-		punctuation = "subtle",
-
-		error = "love",
-		hint = "iris",
-		info = "foam",
-		warn = "gold",
-
-		headings = {
-			h1 = "iris",
-			h2 = "foam",
-			h3 = "rose",
-			h4 = "gold",
-			h5 = "pine",
-			h6 = "foam",
-		},
-		-- or set all headings at once
-		-- headings = 'subtle'
+	colors = { -- add/modify theme and palette colors
+		palette = {},
+		theme = { wave = {}, lotus = {}, dragon = {}, all = {} },
 	},
-
-	-- Change specific vim highlight groups
-	highlight_groups = {
-		ColorColumn = { bg = "rose" },
-
-		-- Blend colours against the "base" background
-		CursorLine = { bg = "foam", blend = 10 },
-		StatusLine = { fg = "love", bg = "love", blend = 10 },
+	overrides = function(colors) -- add/modify highlights
+		return {}
+	end,
+	theme = "wave", -- Load "wave" theme when 'background' option is not set
+	background = { -- map the value of 'background' option to a theme
+		dark = "wave", -- try "dragon" !
+		light = "lotus",
 	},
 })
 
+-- Default options:
 -- catppuccin setup
 require("catppuccin").setup({
 	flavour = "mocha", -- latte, frappe, macchiato, mocha

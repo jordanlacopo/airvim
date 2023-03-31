@@ -44,18 +44,9 @@ return packer.startup(function(use)
 	use("nvim-lua/plenary.nvim") -- lua functions that many plugins use
 	use("rebelot/kanagawa.nvim")
 	use("catppuccin/nvim")
-	use({
-		"rose-pine/neovim",
-		as = "rose-pine",
-		config = function()
-			require("rose-pine").setup()
-		end,
-	})
-	use("christoomey/vim-tmux-navigator") -- tmux & split window navigation
+	use("lewis6991/impatient.nvim")
 	use("kdheepak/lazygit.nvim")
 	use("RRethy/vim-illuminate")
-	use("szw/vim-maximizer") -- maximizes and restores current window
-	use("nvim-treesitter/playground")
 	-- essential plugins
 	use("tpope/vim-surround") -- add, delete, change surroundings (it's awesome)
 	use("inkarkat/vim-ReplaceWithRegister") -- replace with register contents using motion (gr + motion)
